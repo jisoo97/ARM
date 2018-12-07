@@ -1,0 +1,119 @@
+AppName,Developer ID,Instance#,Source,Sink
+com.appsilicious.wallpapers-44.apk,developer01,1,Lorg/apache/http/HttpResponse;.getEntity:()Lorg/apache/http/HttpEntity;,Ljava/io/ByteArrayOutputStream;.write:([BII)V
+com.appsilicious.wallpapers-44.apk,developer01,2,Lorg/apache/http/HttpResponse;.getEntity:()Lorg/apache/http/HttpEntity;,Lcom/android/volley/toolbox/PoolingByteArrayOutputStream;.write:([BII)V
+com.appsilicious.wallpapers-44.apk,developer01,3,Lorg/apache/http/HttpResponse;.getEntity:()Lorg/apache/http/HttpEntity;,Lcom/android/volley/toolbox/PoolingByteArrayOutputStream;.write:([BII)V
+com.appsilicious.wallpapers-44.apk,developer01,4,Lorg/apache/http/HttpResponse;.getEntity:()Lorg/apache/http/HttpEntity;,Ljava/io/ByteArrayOutputStream;.write:([BII)V
+com.appsilicious.wallpapers-44.apk,developer01,5,Lorg/apache/http/HttpResponse;.getEntity:()Lorg/apache/http/HttpEntity;,Landroid/content/SharedPreferences$Editor?;.putString:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+com.appsilicious.wallpapers-44.apk,developer01,6,Lorg/apache/http/HttpResponse;.getEntity:()Lorg/apache/http/HttpEntity;,Lcom/android/volley/toolbox/PoolingByteArrayOutputStream;.write:([BII)V
+com.appsilicious.wallpapers-44.apk,developer01,7,Lorg/apache/http/HttpResponse;.getEntity:()Lorg/apache/http/HttpEntity;,Ljava/io/ByteArrayOutputStream;.write:([BII)V
+com.appsilicious.wallpapers-44.apk,developer01,8,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Ljava/io/ByteArrayOutputStream;.write:([BII)V
+com.appsilicious.wallpapers-44.apk,developer01,9,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Ljava/io/ByteArrayOutputStream;.write:([BII)V
+com.appsilicious.wallpapers-44.apk,developer01,10,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Lcom/android/volley/toolbox/PoolingByteArrayOutputStream;.write:([BII)V
+com.devuni.flashlight-170,developer02,1,Landroid/content/pm/PackageManager;.getInstalledApplications:(I)Ljava/util/List;,Landroid/os/Handler;.sendMessage:(Landroid/os/Message;)Z
+com.emoji.coolkeyboard-90.apk,developer03,1,Landroid/telephony/TelephonyManager;.getDeviceId:()Ljava/lang/String;,Ljava/io/OutputStream;.write:([B)V
+com.emoji.coolkeyboard-90.apk,developer03,2,Ljava/net/URLConnection;.getOutputStream:()Ljava/io/OutputStream;,Ljava/io/ByteArrayOutputStream;.write:([BII)V
+com.emoji.coolkeyboard-90.apk,developer03,3,Landroid/telephony/TelephonyManager;.getDeviceId:()Ljava/lang/String;,Ljava/io/OutputStream;.write:([B)V
+com.emoji.coolkeyboard-90.apk,developer03,4,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Landroid/content/SharedPreferences$Editor?;.putInt:(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+com.emoji.coolkeyboard-90.apk,developer03,5,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Ljava/io/ByteArrayOutputStream;.write:([BII)V
+com.emoji.coolkeyboard-90.apk,developer03,6,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Landroid/content/SharedPreferences$Editor?;.putString:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+com.emoji.coolkeyboard-90.apk,developer03,7,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Landroid/content/SharedPreferences$Editor?;.putInt:(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+com.emoji.coolkeyboard-90.apk,developer03,8,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Ljava/io/ByteArrayOutputStream;.write:([BII)V
+com.emoji.coolkeyboard-90.apk,developer03,9,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Ljava/io/FileOutputStream;.write:([BII)V
+com.emoji.coolkeyboard-90.apk,developer03,10,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I
+com.emoji.coolkeyboard-90.apk,developer03,11,Ljava/net/URLConnection;.getOutputStream:()Ljava/io/OutputStream;,Ljava/io/ByteArrayOutputStream;.write:([BII)V
+com.emoji.coolkeyboard-90.apk,developer03,12,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Ljava/io/FileOutputStream;.write:([BII)V
+com.emoji.coolkeyboard-90.apk,developer03,13,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Landroid/util/Log;.w:(Ljava/lang/String;Ljava/lang/String;)I
+com.emoji.coolkeyboard-90.apk,developer03,14,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I
+com.emoji.coolkeyboard-90.apk,developer03,15,Landroid/telephony/TelephonyManager;.getDeviceId:()Ljava/lang/String;,Landroid/util/Log;.w:(Ljava/lang/String;Ljava/lang/String;)I
+com.emoji.coolkeyboard-90.apk,developer03,16,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I
+com.emoji.coolkeyboard-90.apk,developer03,17,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Landroid/content/SharedPreferences$Editor?;.putInt:(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+com.emoji.coolkeyboard-90.apk,developer03,18,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Landroid/content/SharedPreferences$Editor?;.putString:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+com.emoji.coolkeyboard-90.apk,developer03,19,Ljava/net/URLConnection;.getOutputStream:()Ljava/io/OutputStream;,Ljava/io/OutputStream;.write:([BII)V
+com.emoji.coolkeyboard-90.apk,developer03,20,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Landroid/content/SharedPreferences$Editor?;.putInt:(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+com.emoji.coolkeyboard-90.apk,developer03,21,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Ljava/io/ByteArrayOutputStream;.write:([BII)V
+com.emoji.coolkeyboard-90.apk,developer03,22,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Ljava/io/FileOutputStream;.write:([BII)V
+com.emoji.coolkeyboard-90.apk,developer03,23,Landroid/telephony/TelephonyManager;.getDeviceId:()Ljava/lang/String;,Landroid/util/Log;.w:(Ljava/lang/String;Ljava/lang/String;)I
+com.emoji.coolkeyboard-90.apk,developer03,24,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Ljava/io/ByteArrayOutputStream;.write:([BII)V
+com.emoji.coolkeyboard-90.apk,developer03,25,Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;,Landroid/content/SharedPreferences$Editor?;.putInt:(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,1,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,2,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,3,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,4,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,5,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,6,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.d:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,7,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,8,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/content/SharedPreferences$Editor?;.putString:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor; 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,9,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,10,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,11,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,12,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,13,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,14,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,15,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,16,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.d:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,17,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.w:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,18,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/content/SharedPreferences$Editor?;.putLong:(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor; 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,19,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,20,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,21,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,22,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,23,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.e:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,24,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,25,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/content/SharedPreferences$Editor?;.putString:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor; 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,26,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,27,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,28,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,29,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.e:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,30,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,31,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,32,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,33,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,34,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,35,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,36,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.e:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,37,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,38,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,39,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,40,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Ljava/io/OutputStream;.write:([B)V 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,41,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,42,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Ljava/io/ByteArrayOutputStream;.write:([BII)V 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,43,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,44,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.e:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,45,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/content/SharedPreferences$Editor?;.putLong:(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor; 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,46,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Ljava/net/URL;.openConnection:()Ljava/net/URLConnection; 0
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,47,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,48,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,49,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,50,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Ljava/io/ByteArrayOutputStream;.write:([BII)V 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,51,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,52,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,53,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,54,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,55,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,56,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,57,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,58,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.d:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,59,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,60,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.w:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,61,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Ljava/net/URL;.openConnection:()Ljava/net/URLConnection; 0
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,62,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,63,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,64,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,65,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,66,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,67,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,68,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,69,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,70,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,71,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.e:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,72,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.e:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,73,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,74,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,75,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,76,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.d:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,77,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Ljava/io/OutputStream;.write:([B)V 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,78,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,79,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,80,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.d:(Ljava/lang/String;Ljava/lang/String;)I 1
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,81,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I 2
+com.emoji.ikeyboard.theme.galaxy2-19,developer03,82,Lcom/emoji/ikeyboard/theme/retro/ThemeDemoActivity;.onNewIntent:(Landroid/content/Intent;)V, Landroid/util/Log;.d:(Ljava/lang/String;Ljava/lang/String;)I 1
