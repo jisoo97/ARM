@@ -1,4 +1,4 @@
-pragma solidity ^0.4.0;
+solidity ^0.4.0;
 pragma experimental ABIEncoderV2;
 
 contract Arms {
@@ -158,14 +158,34 @@ contract Arms {
 		return app2leak[aname];
 	}
 
+
 	//SELECT * FROM com2app WHERE cname = cname
 	function com2apps(string cname) public view returns (App[]) {
 		return com2app[cname];
 	}
 
+
 	//SELECT * FROM com2app WHERE dname = dname	
 	function dev2apps(string dname) public view returns (App[]) {
 		return dev2app[dname];
+	}
+
+	//SELECT * FROM app2leak WHERE aname = aname AND index = i
+	function app2leak_i(string aname, uint256 i) public view returns(string, string) {
+		Leak storage leak = app2leak[aname][i];
+		return (leak.source, leak.sink);
+	}
+
+	//SELECT * FROM com2app WHERE cname = cname AND index = i
+	function com2app_i(string cname, uint256 i) public view returns (string, uint256, uint256) {
+		App app = com2app[cname][i];
+		return (app.aname, app.num_leaks, app.category);
+	}
+
+	//SELECT * FROM com2app WHERE dname = dname	AND index = i
+	function dev2app_i(string dname, uint256 i) public view returns (string, uint256, uint256) {
+		App app = dev2app[dname][i];
+		return (app.aname, app.num_leaks, app.category);
 	}
 
 	function test2 (string name) public returns (string) {
