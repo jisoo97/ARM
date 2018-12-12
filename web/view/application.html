@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ARM</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/home">
+                        ARM
+                    </a>
+                </li>
+                <li>
+                    <a href="/TeamMember">Team Member</a>
+                </li>
+                <li>
+                    <a href="/SecurityCompany">Security Company List</a>
+                </li>
+                <li>
+                    <a href="/DeveloperRank">Developer Rank</a>
+                </li>
+                <li>
+                    <a href="/Application">Application Analysis</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <div class="container">
+            <br />
+            <h1>
+                Application
+            </h1><br />
+            <!--table-->
+            <table class="table table-hover table table-bordered" id="application_table">
+                <thead>
+                    <tr>
+                        <th scope="col">Application Name</th>
+                        <th scope="col">Version</th>
+                        <th scope="col">Developer</th>
+                        <th scope="col">The number of Leak</th>
+                        <th scope="col">Leak Detected</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+            <!--/table-->
+        </div>
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $("#wrapper").toggleClass("toggled");
+        var i;
+        for (i = 1; i < 10; i++) {
+            add_row(i);
+        }
+
+        function add_row(i) {
+            var table = document.getElementById('application_table');
+            var row = table.insertRow(i); // 하단에 추가
+            var cell = new Array(5);
+            var j;
+            for (j = 0; j < cell.length; j++) {
+                cell[j] = row.insertCell(j);
+            }
+            cell[0].innerHTML = i;
+        }
+
+        $("#application_table tr").click(function () {
+            var tr = $(this);
+            var td = tr.children();
+            var app_name = td.eq(0).text();
+            console.log(app_name);
+            location.href = "/Application/" + app_name;
+        });
+    </script>
+</body>
+</html>
