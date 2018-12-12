@@ -1,5 +1,5 @@
-var dir = '/home/bc/ARM/web/';
-var ArmsOutput = require(dir + 'js/armsoutput2.js');
+var dir = '/home/bc/project/web/';
+var ArmsOutput = require(dir + 'js/armsoutput_new.js');
 var express = require('express');
 var app = express();
 var ArmsOutput = ArmsOutput.ArmsOutput;
@@ -11,9 +11,9 @@ app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
      extended: true
 }));
-var defaultAddr = "0xe089c86eed1be04fa34db01d4f72be3ea43d6c3f"
+var defaultAddr = "0xa92fa8c0462e228904772d9abe4b3169d7acdbc0";
 //var defaultAddr = "0x82dea506bcdd922083825d80d908f3e2077dbd73"; //--datadir fastdata
-var unlockPromise = web3.eth.personal.unlockAccount(defaultAddr, "coinbase", 3600).then(function(_res){
+var unlockPromise = web3.eth.personal.unlockAccount(defaultAddr, "ec7t8b5z8*", 3600).then(function(_res){
       console.log("account unlodkced");
 });
 
