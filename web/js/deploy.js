@@ -1,5 +1,5 @@
 var dir = '/home/bc/project/web/';
-var ArmsOutput = require(dir + 'js/armsoutput_new.js');
+var ArmsOutput = require(dir + 'js/armsoutput_final.js');
 var express = require('express');
 var app = express();
 var ArmsOutput = ArmsOutput.ArmsOutput;
