@@ -53,10 +53,9 @@
                 <thead>
                     <tr>
                         <th scope="col">Application Name</th>
-                        <th scope="col">Version</th>
+                        <th scope="col">The numbe of Leak</th>
                         <th scope="col">Developer</th>
-                        <th scope="col">The number of Leak</th>
-                        <th scope="col">Leak Detected</th>
+                        <th scope="col">Category</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -73,26 +72,70 @@
     <!-- Bootstrap core JavaScript -->
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script>
+	<script>
         $("#wrapper").toggleClass("toggled");
-        var i;
-        for (i = 1; i < 10; i++) {
-            add_row(i);
+/*		var i =0;
+		for(i=1; i<10; i++)
+			add_row(i, "muno");
+*/	
+		 $("#application_table tr").click(function () {
+             console.log("click");
+             var tr = $(this);
+             var td = tr.children();
+             var app_name = td.eq(0).text();
+             console.log(app_name);
+             location.href = "/Application/" + app_name;
+	    });
+
+		
+		$.get("/aa", function(data){
+				console.log(data);
+                fillTable(data);
+				});
+        
+	   function fillTable(data) {
+                var length = data.appName.length;
+                var i;
+                for (i = 0; i < length; i++) {
+                        add_row(i, data);
+                }
         }
 
-        function add_row(i) {
-            var table = document.getElementById('application_table');
-            var row = table.insertRow(i); // 하단에 추가
-            var cell = new Array(5);
-            var j;
-            for (j = 0; j < cell.length; j++) {
-                cell[j] = row.insertCell(j);
-            }
-            cell[0].innerHTML = i;
+        function add_row(i, data) {
+              var table = document.getElementById('application_table');
+              var row = table.insertRow(i+1); // 하단에 추가
+              var cell = new Array(4);
+              var j;
+              for (j = 0; j < cell.length; j++) {
+                    cell[j] = row.insertCell(j);
+              }
+              cell[0].innerHTML = i;//data.appName[i];
+             // cell[1].innerHTML = data.numLeak[i];
+             // cell[2].innerHTML = data.dev[i];
+             // cell[3].innerHTML = num2cate(data.cate[i]);
         }
+		function num2cate(num){
+			//0: game, 1: productivity, 2: social, 3: wallpaper, 4:weather
+			var cate;
+			if(num ==0){
+				cate = "game";
+			}else if(num==1){
+				cate = "productivity";
+			}
+			else if(num==2){
+				cate = "social";
+			}
+			else if(num==3){
+				cate = "wallpaper";
+			}else{
+				cate = "weater";
+			}
+			return cate;
+		}
 
-        $("#application_table tr").click(function () {
-            var tr = $(this);
+		$("#application_table tr").click(function () {
+            console.log("click");
+			var tr = $(this);
             var td = tr.children();
             var app_name = td.eq(0).text();
             console.log(app_name);

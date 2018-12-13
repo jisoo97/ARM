@@ -61,27 +61,39 @@
     <!-- Bootstrap core JavaScript -->
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script>
+	<script>
         $("#wrapper").toggleClass("toggled");
-        var i;
-        for (i = 1; i < 10; i++) {
-            add_row(i);
-        }
         var url = location.href;
         var app_name = url.split('/')[4];
         console.log("app name:" + app_name);
         $("#app_name").text("Leak of " + app_name);
 
-        function add_row(i) {
-            var table = document.getElementById('leak_info_table');
-            var row = table.insertRow(i); 
-            var cell = new Array(3);
-            var j;
-            for (j = 0; j < cell.length; j++) {
-                cell[j] = row.insertCell(j);
-            }
-            cell[0].innerHTML = i;
-        }
-    </script>
+	    $.get("/leak", function (data) {
+	               console.log(data);
+	               fillTable(data);
+	    });
+
+        function fillTable(data) {
+	          var length = data.comName.length;
+	          var i;
+	          for (i = 0; i < length; i++) {
+	                  add_row(i, data);
+	          }
+	     }
+		
+		 function add_row(i, data) {
+			    var table = document.getElementById('leak_info_table');
+				var row = table.insertRow(i+1); // 하단에 추가
+				var cell = new Array(3);
+				var j;
+				for (j = 0; j < cell.length; j++) {
+				        cell[j] = row.insertCell(j);
+				}
+				cell[0].innerHTML = = i+1; 
+				cell[1].innerHTML = data.source[i];
+				cell[2].innerHTML = data.sink[i];
+	    }
+
+	</script>
 </body>
 </html>

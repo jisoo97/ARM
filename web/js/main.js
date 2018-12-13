@@ -4,7 +4,7 @@ var dir = '/home/bc/project_dh/web/';
 var bodyParser = require('body-parser');
 var Web3 = require('web3');
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-var ArmOutput = require(dir + 'js/armsoutput_new.js');
+var ArmOutput = require(dir + 'js/armsoutput_final.js');
 //var sc = require(dir + 'js/sc.js');
 app.use(express.static('public'));
 app.use(bodyParser.json());       // to support JSON-encoded bodies
@@ -52,13 +52,13 @@ app.listen(3000, function () {
 var ArmsOutput = ArmOutput.ArmsOutput;
 var ArmsContractAbi = ArmsOutput.contracts['Arms.sol:Arms'].abi;
 //var contractAddr = "0xAc00Ce20F25d84Ced289a187Bb89224b3c553dF5";
-var contractAddr = "0x53d1126Be4DC93903b59Ebfcc8DCAe2A27c6e6f2";
+var contractAddr = "0x010F7e9BdaB71752FEeCb6BABF0432A2a20Bd0A3";
 Arms = new web3.eth.Contract(JSON.parse(ArmsContractAbi), contractAddr);
 
 
 app.get("/sc", function(req, res){
 	var SCNameLists = ['sibal'];
-	SCNameLists=get_SC_name_list();
+	SCNameLists=Arms.methods.get_company_name_arr().call({from: defaultAddr});
 	SCNameLists.then(function(_scnamelist) 	{
 	console.log("_scnamelist length " + _scnamelist.length);
 		var d = async function loop() {
@@ -68,8 +68,6 @@ app.get("/sc", function(req, res){
 			var specialArea = [];
 			for (let j = 0; j < _scnamelist.length; j++) {
 				await new Promise(resolve => setTimeout(resolve, 10));
-				var cname, adPoint, appNum, specialArea;
-				var s  = await func(j);
 				cname[j] = await _scnamelist[j];
 				adPoint[j] = await get_SC_add_point(cname[j]);
 				appNum[j] = await get_SC_app_num(cname[j]);
@@ -90,55 +88,6 @@ app.get("/sc", function(req, res){
 		}(); 
 	}); 
 });
-
-function get_SC_info_lists() {
-    var SCNameLists = ['sibal'];
-	SCNameLists=get_SC_name_list();
-	SCNameLists.then(function(_scnamelist) 	{
-	console.log("_scnamelist length " + _scnamelist.length);
-		var d = async function loop() {
-			var cname = [];
-			var adPoint = [];
-			var appNum = [];
-			var specialArea = [];
-			for (let j = 0; j < _scnamelist.length; j++) {
-				await new Promise(resolve => setTimeout(resolve, 10));
-				var cname, adPoint, appNum, specialArea;
-				var s  = await func(j);
-				cname[j] = await _scnamelist[j];
-				adPoint[j] = await get_SC_add_point(cname[j]);
-				/*
-				await func(10 + j);
-				await func(100 + j);
-				await func(1000 + s);
-				await console.log(cname1);
-				*/
-				appNum[j] = await get_SC_app_num(cname[j]);
-				specialArea[j] = await get_specialized_area(cname[j]);
-			}
-			console.log("sssssssssssssssssssssssibal");
-			console.log(cname);
-			console.log(adPoint);
-			console.log(appNum);
-			console.log(specialArea);
-		}(); 
-	}); 
-}
-function func(item){
-	console.log("sibal " + item);
-	return item;
-}
-function get_SC_name_list() {
-	var company_lists =Arms.methods.get_company_name_arr().call({from: defaultAddr});
-/*
-	company_lists.then(function(_result) {
-	     console.log("company lists");
-	     console.log(_result);
-		 return _result;
-	});
-	*/
-	return company_lists;
-}
 
 function get_SC_add_point(cname) {
     var addPoint = Arms.methods.get_com(cname).call({ from: defaultAddr });
@@ -166,6 +115,164 @@ function get_specialized_area(cname) {
     });
 	return res;
 }
+
+app.get("/aa", function(req, res){
+	var AppNameLists = ['sibal'];
+	AppNameLists=Arms.methods.get_application_name_arr().call({from: defaultAddr});
+	AppNameLists.then(function(_appnamelist) 	{
+	console.log("_appnamelist length " + _appnamelist.length);
+		var d = async function loop() {
+			var appName = [];
+			var numLeak = [];
+			var dev = [];
+			var cate = [];
+			for (let j = 0; j < _appnamelist.length; j++) {
+				await new Promise(resolve => setTimeout(resolve, 10));
+				appName[j] = await _appnamelist[j];
+				var app = await get_app(appName[j]);
+				numLeak[j] = app[0];
+				dev[j] = app[1];
+				cate[j] = app[2];
+			}
+			console.log(appName);
+			console.log(numLeak);
+			console.log(dev);
+			console.log(cate);
+			var arr = {
+				appName : appName,
+				numLeak : numLeak,
+				dev : dev,
+				cate : cate
+			};
+			res.send(arr);
+
+		}(); 
+	}); 
+});
+function get_app(aname) {
+	var app = Arms.methods.get_app(aname).call({ from: defaultAddr }); 
+	var res = app.then(function (_result) {
+			return _result;
+			}); 
+	return res;
+}
+
+app.get("/dr", function(req, res){
+		var DevNameLists = [];
+		DevNameLists=Arms.methods.get_developer_name_arr().call({from: defaultAddr});
+		DevNameLists.then(function(_devnamelist)    {
+			console.log("_devnamelist length " + _devnamelist.length);
+			var d = async function loop() {
+			var devName = [];
+			var leakPerNum = []; 
+			for (let j = 0; j < _devnamelist.length; j++) {
+				await new Promise(resolve => setTimeout(resolve, 10));
+				devName[j] = _devnamelist[j];
+				var devApps = await get_devapps(devName[j]);
+				var totalNumLeak = 0;
+				var dd = await async function loop() {
+					for (let k = 0 ; k < devApps.length ; k++) {
+						await new Promise(resolve => setTimeout(resolve, 10));
+						var dname = devApps[k][0];
+						var numLeak = (await get_app(dname))[0];
+						totalNumLeak += await (numLeak*1);
+					}
+
+					await new Promise(resolve => setTimeout(resolve, 10));
+					return totalNumLeak;
+				}().then(function(data) { leakPerNum[j] = (data / devApps.length); });
+			}   
+			console.log(devName);
+			console.log(leakPerNum);
+			bubbleSort(leakPerNum, devName);
+			console.log(devName);
+			console.log(leakPerNum);
+
+			var arr = { 
+				app : devName,
+				dev : leakPerNum
+			};  
+			res.send(arr);
+		}(); 
+	}); 
+});
+
+function bubbleSort(a, b) {
+	var swapped;
+	do {
+		swapped = false;
+		for (var i=0; i < a.length-1; i++) {
+			if (a[i] > a[i+1]) {
+				var tempa = a[i];
+				var tempb = b[i];
+				a[i] = a[i+1];
+				b[i] = b[i+1];
+				a[i+1] = tempa;
+				b[i+1] = tempb;
+				swapped = true;
+			}
+		}
+	} while (swapped);
+}
+function get_totalNumLeak(devApps) {
+	var totalNumLeak = 0;
+	var res = async function loop() {
+		for (let k = 0 ; k < devApps.length ; k++) {
+			await new Promise(resolve => setTimeout(resolve, 10));
+			var dname = devApps[k][0];
+			var numLeak = (await get_app(dname))[0];
+			totalNumLeak += await (numLeak*1);
+			await console.log("sibaaaaaaaaaaaaaaaal " + totalNumLeak);
+		}
+
+		await new Promise(resolve => setTimeout(resolve, 10));
+		return totalNumLeak;
+	}();
+	res.then
+}
+function get_devapps(dname) {
+	    var app = Arms.methods.dev2apps(dname).call({ from: defaultAddr }); 
+		var res = app.then(function (_result) {
+		          return _result;
+		}); 
+		return res;
+}
+
+app.get("/leak", function (req, res) {
+	var LeakLists = [];
+	var aname = req.body.aname;
+	LeakLists = Arms.methods.app2leaks(aname).call({ from: defaultAddr });
+	LeakLists.then(function (_leaklist) {
+		console.log("_leaklist length " + _leaklist.length);
+		var source = [];
+		var sink = [];
+		var d = async function loop() {
+			for (let j = 0; j < _leaklist.length; j++) {
+				source[j] = await _leaklist[j][0];
+				sink[j] = await _leaklist[j][1];
+			}
+		}
+		console.log(source);
+		console.log(sink);
+		var arr = {
+			source: source,
+			sink: sink
+		};
+		res.send(arr);
+		}();
+	});
+});
+
+function get_leak(aname) {
+	var leak = Arms.methods.app2leaks(aname).call({ from: defaultAddr });
+	var res = leak.then(function (_result) {
+			return _result;
+			});
+	return res;
+}
+
+
+
 
 
 //../go-ethereum/build/bin/geth --datadir ./node --rpc --networkid 8079 --rpcapi 'web3, net, personal, admin, eth' --rpcaddr "0.0.0.0"  --rpcport 8545 --rpccorsdomain "*" console

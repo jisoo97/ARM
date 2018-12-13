@@ -67,25 +67,66 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script>
+	<script>
         $("#wrapper").toggleClass("toggled");
-        var i ;
-        for (i = 1; i < 10; i++) {
-            add_row(i);
-        }
+		//var socket = io();
+		//data request
+		//socket.emit("SCRequest", {});
+		//data receive
+		/*
+		socket.on('SCReply', function (data) {
+		       console.log(data);
+		       fillTable(data);
+		});
+*/
+		$.get("/sc", function(data){
+			fillTable(data);
+		});
 
-        function add_row(i) {
-             var table = document.getElementById('company_list_table');
-             var row = table.insertRow(i); // 하단에 추가
-             var cell = new Array(4);
-             var j;
-             for (j = 0; j < cell.length; j++) {
-                 cell[j] = row.insertCell(j);
-             }
-             cell[0].innerHTML = i;
-        }
+        function fillTable(data) {
+		         var length = data.cname.length;
+		         var i;
+		         for (i = 0; i < length; i++) {
+		                   add_row(i, data);
+		         }
+		}
 
-        function delete_row(i) {
+        function add_row(i, data) {
+		       var table = document.getElementById('company_list_table');
+		       var row = table.insertRow(i+1); // 하단에 추가
+		       var cell = new Array(4);
+		       var j;
+		       for (j = 0; j < cell.length; j++) {
+		             cell[j] = row.insertCell(j);
+		       }
+		       cell[0].innerHTML = data.cname[i];
+		       cell[1].innerHTML = data.adPoint[i];
+		       cell[2].innerHTML = data.appNum[i];
+		       cell[3].innerHTML = num2cate(data.specialArea[i]);
+		}
+
+		function num2cate(num){
+			//0: game, 1: productivity, 2: social, 3: wallpaper, 4:weather
+			var cate;
+			if(num ==0){
+				cate = "game";
+			}else if(num==1){
+				cate = "productivity";
+			}
+			else if(num==2){
+				cate = "social";
+			}
+			else if(num==3){
+				cate = "wallpaper";
+			}else{
+				cate = "weater";
+			}
+			return cate;
+		}
+		
+		
+		
+		function delete_row(i) {
             var table = document.getElementById('company_list_table');
             table.deleteRow(i); // 하단부터 삭제
         }

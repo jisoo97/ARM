@@ -80,12 +80,16 @@
                 // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
                 web3 = new Web3(new Web3.providers.HttpProvider("http://141.223.85.162:8545"));
             }
-            unlockAccount(web3, defaultAddr, pw);
-            deployContract(web3);
+            //unlockAccount(web3, defaultAddr, pw);
+            //deployContract(web3);	
+			$.get("/test3", function(_result) {
+				console.log("num_total_app: " + _result);
+			});
+			$.get("/test2", function(_result) {
+				console.log("num_total_app2: " + _result);
+			});
         });
-	$.get("/test", function(_result) {
-		console.log("num_total_app: " + _result);
-	});
+
 
 	$("#hello").html(web3);
 	
