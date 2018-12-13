@@ -25,16 +25,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/TeamMember">Team Member</a>
+                    <a href="/TeamMember">Team Members</a>
                 </li>
                 <li>
-                    <a href="/SecurityCompany">Security Company List</a>
+                    <a href="/SecurityCompany">Security Companies</a>
                 </li>
                 <li>
-                    <a href="/DeveloperRank">Developer Rank</a>
+                    <a href="/DeveloperRank">Developers' Ranking</a>
                 </li>
                 <li>
-                    <a href="/Application">Application Analysis</a>
+                    <a href="/Application">Leaks in Apps</a>
                 </li>
             </ul>
         </div>
@@ -44,7 +44,7 @@
             <div class="container-fluid">
                 <br />
                 <h1 >
-                    Project Introduction(개요?)
+                    Welcome to ARMs!
                 </h1>
                 <h6>
                     This project is all about
@@ -57,7 +57,6 @@
         </div>
         <!-- /#page-content-wrapper -->
     </div>
-    <p id=hello>hello</p>
     <!-- /#wrapper -->
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -68,30 +67,6 @@
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
-	var web3;	
-
-        window.addEventListener('load', function () {
-            if (typeof web3 !== 'undefined') {
-                // Use Mist/MetaMask's provider
-                console.log("loaded");
-                web3 = new Web3(web3.currentProvider);
-            } else {
-                console.log('No web3? You should consider trying MetaMask!')
-                // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
-                web3 = new Web3(new Web3.providers.HttpProvider("http://141.223.85.162:8545"));
-            }
-            //unlockAccount(web3, defaultAddr, pw);
-            //deployContract(web3);	
-			$.get("/test3", function(_result) {
-				console.log("num_total_app: " + _result);
-			});
-			$.get("/test2", function(_result) {
-				console.log("num_total_app2: " + _result);
-			});
-        });
-
-
-	$("#hello").html(web3);
 	
 
        /* var defaultAddr = "0x82dea506bcdd922083825d80d908f3e2077dbd73"; //--datadir fastdata

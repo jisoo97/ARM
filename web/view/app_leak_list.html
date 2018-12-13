@@ -21,19 +21,20 @@
                         ARM
                     </a>
                 </li>
-                <li>
-                    <a href="/TeamMember">Team Member</a>
-                </li>
-                <li>
-                    <a href="/SecurityCompany">Security Company List</a>
-                </li>
-                <li>
-                    <a href="/DeveloperRank">Developer Rank</a>
-                </li>
-                <li>
-                    <a href="/Application">Application Analysis</a>
-                </li>
-            </ul>
+				<li>
+				<a href="/TeamMember">Team Members</a>
+				</li>
+				<li>
+				<a href="/SecurityCompany">Security Companies</a>
+				</li>
+				<li>
+				<a href="/DeveloperRank">Developers' Ranking</a>
+				</li>
+				<li>
+				<a href="/Application">Leaks in Apps</a>
+				</li>
+
+           </ul>
         </div>
         <!-- /#sidebar-wrapper -->
         <div class="container">
@@ -64,17 +65,17 @@
 	<script>
         $("#wrapper").toggleClass("toggled");
         var url = location.href;
-        var app_name = url.split('/')[4];
-        console.log("app name:" + app_name);
-        $("#app_name").text("Leak of " + app_name);
+        var aname = url.split('/')[4];
+        console.log("app name:" + aname);
+        $("#app_name").text("Leak of " + aname);
 
-	    $.get("/leak", function (data) {
-	               console.log(data);
-	               fillTable(data);
+	    $.get("/leak?aname=" + aname, function (data) {
+			console.log(data);
+			fillTable(data);
 	    });
 
         function fillTable(data) {
-	          var length = data.comName.length;
+	          var length = data.source.length;
 	          var i;
 	          for (i = 0; i < length; i++) {
 	                  add_row(i, data);
@@ -82,16 +83,16 @@
 	     }
 		
 		 function add_row(i, data) {
-			    var table = document.getElementById('leak_info_table');
-				var row = table.insertRow(i+1); // 하단에 추가
-				var cell = new Array(3);
-				var j;
-				for (j = 0; j < cell.length; j++) {
-				        cell[j] = row.insertCell(j);
-				}
-				cell[0].innerHTML = = i+1; 
-				cell[1].innerHTML = data.source[i];
-				cell[2].innerHTML = data.sink[i];
+			var table = document.getElementById('leak_info_table');
+			var row = table.insertRow(i+1); // 하단에 추가
+			var cell = new Array(3);
+			var j;
+			for (j = 0; j < cell.length; j++) {
+					cell[j] = row.insertCell(j);
+			}
+			cell[0].innerHTML = i+1; 
+			cell[1].innerHTML = data.source[i];
+			cell[2].innerHTML = data.sink[i];
 	    }
 
 	</script>

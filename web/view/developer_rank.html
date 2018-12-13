@@ -10,6 +10,9 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -37,65 +40,125 @@
         </div>
         <!-- /#sidebar-wrapper -->
         <div class="container">
-            <br />
-            <h1>Best Developer</h1>
-            <image src="images/kakao.png" width ="100" height ="100"></image>
-            <h6> Kakao [2018/12/1st Week]</h6>
-            <!--table-->
-             <br />
             <h1>
-                 Developer Rank
-             </h1><br />
-             <table class="table table-hover" id="developer_rank_table">
-            <thead>
-                <tr>
-                    <th scope="col">Rank</th>
-                    <th scope="col">Developer</th>
-                    <th scope="col">Applications</th>
-                </tr>
-            </thead>
-        </table>
-            <!--/table-->
+                Developer Rank
+            </h1><br />
+        </div>
+
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="active"><a data-toggle="pill" href="#WallPaper">Wall Paper</a></li>
+                <li><a data-toggle="pill" href="#Social">Social</a></li>
+                <li><a data-toggle="pill" href="#Game">Game</a></li>
+                <li><a data-toggle="pill" href="#Productivity">Productivity</a></li>
+                <li><a data-toggle="pill" href="#Weather">Weather</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="WallPaper" class="tab-pane fade in active">
+                    <h3>Wall Paper</h3>
+                    <table class="table table-hover" id="developer_rank_table_0">
+                        <thead>
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Developer</th>
+                                <th scope="col">Applications</th>
+								<th scope="col">#Leak/#TotalAppNum</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <!--/table-->
+                </div>
+                <div id="Social" class="tab-pane fade">
+                    <h3>Social</h3>
+                    <table class="table table-hover" id="developer_rank_table_1">
+                        <thead>
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Developer</th>
+                                <th scope="col">Applications</th>
+								<th scope="col">#Leak/#TotalAppNum</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div id="Game" class="tab-pane fade">
+                    <h3>Game</h3>
+                    <table class="table table-hover" id="developer_rank_table_2">
+                        <thead>
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Developer</th>
+                                <th scope="col">Applications</th>
+								<th scope="col">#Leak/#TotalAppNum</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div id="Productivity" class="tab-pane fade">
+                    <h3>Productivity</h3>
+                    <table class="table table-hover" id="developer_rank_table_3">
+                        <thead>
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Developer</th>
+                                <th scope="col">Applications</th>
+								<th scope="col">#Leak/#TotalAppNum</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div id="Weather" class="tab-pane fade">
+                    <h3>Weather</h3>
+                    <table class="table table-hover" id="developer_rank_table_4">
+                        <thead>
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Developer</th>
+                                <th scope="col">Applications</th>
+								<th scope="col">#Leak/#TotalAppNum</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
     <!-- /#wrapper -->
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script>
-        $("#wrapper").toggleClass("toggled");
-		$.get("/dr",function(data){
-               fillTable(data);
-        });
+    <script>
+	$("#wrapper").toggleClass("toggled");
+	$.get("/dr",function(data){
+			fillTable(data);
+	});
 
-        function fillTable(data) {
-                var length = data.dev.length;
-                var i;
-                for (i = 0; i < length; i++) {
-                      add_row(i, data);
-                }
-        }
+	function fillTable(data) {
+		var length = data.dev.length;
+		var i=0;
+		console.log(data.cate);
+		for(i=0;i<length;i++){
+			add_row(i,data);
+		}
+	}
 
-        function add_row(i, data) {
-              var table = document.getElementById('developer_rank_table');
-              var row = table.insertRow(i+1); // 하단에 추가
-              var cell = new Array(3);
-              var j;
-              for (j = 0; j < cell.length; j++) {
-                  cell[j] = row.insertCell(j);
-              }
-              cell[0].innerHTML = i;
-              cell[1].innerHTML = data.dev[i];
-              cell[2].innerHTML = data.app[i];
-        }
-
-
-        function delete_row(i) {
-            var table = document.getElementById('developer_rank_table');
-            table.deleteRow(i); // 하단부터 삭제
-        }
-            //http://bootstrap4.kr/docs/4.0/content/tables/
-    </script>
-
+	function add_row(num, data) {
+		var cate = data.cate[num];
+		console.log(cate);
+		var table = document.getElementById('developer_rank_table_' + cate);
+		var i = table.rows.length;
+		var row = table.insertRow(i); // 하단에 추가
+		var cell = new Array(4);
+		var j;
+		for (j = 0; j < cell.length; j++) {
+			cell[j] = row.insertCell(j);
+		}
+		cell[0].innerHTML = i+1;
+		cell[1].innerHTML = data.dev[num];
+		//cell[2].innerHTML = data.app[i];
+		cell[3].innerHTML = data.leakPerNum[num];
+	}
+</script>
 </body>
 </html>

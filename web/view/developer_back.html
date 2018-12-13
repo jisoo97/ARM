@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/home">
+                        ARM
+                    </a>
+                </li>
+				<li>
+				<a href="/TeamMember">Team Members</a>
+				</li>
+				<li>
+				<a href="/SecurityCompany">Security Companies</a>
+				</li>
+				<li>
+				<a href="/DeveloperRank">Developers' Ranking</a>
+				</li>
+				<li>
+				<a href="/Application">Leaks in Apps</a>
+				</li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <div class="container">
+            <br />
+            <h1>Best Developer</h1>
+            <image src="images/kakao.png" width ="100" height ="100"></image>
+            <h6> Kakao [2018/12/1st Week]</h6>
+            <!--table-->
+             <br />
+            <h1>
+                 Developer Rank
+             </h1><br />
+             <table class="table table-hover" id="developer_rank_table">
+            <thead>
+                <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">Developer</th>
+                    <th scope="col">Applications</th>
+                </tr>
+            </thead>
+        </table>
+            <!--/table-->
+        </div>
+    </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script>
+        $("#wrapper").toggleClass("toggled");
+		$.get("/dr",function(data){
+               fillTable(data);
+        });
+
+        function fillTable(data) {
+                var length = data.dev.length;
+                var i;
+                for (i = 0; i < length; i++) {
+                      add_row(i, data);
+                }
+        }
+
+        function add_row(i, data) {
+              var table = document.getElementById('developer_rank_table');
+              var row = table.insertRow(i+1); // 하단에 추가
+              var cell = new Array(3);
+              var j;
+              for (j = 0; j < cell.length; j++) {
+                  cell[j] = row.insertCell(j);
+              }
+              cell[0].innerHTML = i;
+              cell[1].innerHTML = data.dev[i];
+              cell[2].innerHTML = data.app[i];
+        }
+
+
+        function delete_row(i) {
+            var table = document.getElementById('developer_rank_table');
+            table.deleteRow(i); // 하단부터 삭제
+        }
+            //http://bootstrap4.kr/docs/4.0/content/tables/
+    </script>
+
+</body>
+</html>

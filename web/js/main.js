@@ -134,10 +134,10 @@ app.get("/aa", function(req, res){
 				dev[j] = app[1];
 				cate[j] = app[2];
 			}
-			console.log(appName);
-			console.log(numLeak);
-			console.log(dev);
-			console.log(cate);
+			//console.log(appName);
+			//console.log(numLeak);
+			//console.log(dev);
+			//console.log(cate);
 			var arr = {
 				appName : appName,
 				numLeak : numLeak,
@@ -161,10 +161,11 @@ app.get("/dr", function(req, res){
 		var DevNameLists = [];
 		DevNameLists=Arms.methods.get_developer_name_arr().call({from: defaultAddr});
 		DevNameLists.then(function(_devnamelist)    {
-			console.log("_devnamelist length " + _devnamelist.length);
+			//console.log("_devnamelist length " + _devnamelist.length);
 			var d = async function loop() {
 			var devName = [];
-			var leakPerNum = []; 
+			var leakPerNum = [];
+			var cate = [];
 			for (let j = 0; j < _devnamelist.length; j++) {
 				await new Promise(resolve => setTimeout(resolve, 10));
 				devName[j] = _devnamelist[j];
@@ -173,24 +174,29 @@ app.get("/dr", function(req, res){
 				var dd = await async function loop() {
 					for (let k = 0 ; k < devApps.length ; k++) {
 						await new Promise(resolve => setTimeout(resolve, 10));
-						var dname = devApps[k][0];
+						console.log("devApps : " + devApps[k]);
+						var dname = await devApps[k][0];
+						cate[j] = await devApps[k][3];
 						var numLeak = (await get_app(dname))[0];
 						totalNumLeak += await (numLeak*1);
 					}
 
 					await new Promise(resolve => setTimeout(resolve, 10));
 					return totalNumLeak;
-				}().then(function(data) { leakPerNum[j] = (data / devApps.length); });
+				}().then(function(data) { 
+						leakPerNum[j] = (data / devApps.length); 
+					});
 			}   
-			console.log(devName);
-			console.log(leakPerNum);
+			//console.log(devName);
+			//console.log(leakPerNum);
 			bubbleSort(leakPerNum, devName);
-			console.log(devName);
-			console.log(leakPerNum);
-
+			//console.log(devName);
+			//console.log(leakPerNum);
+			console.log("cate: " + cate);
 			var arr = { 
-				app : devName,
-				dev : leakPerNum
+				dev : devName,
+				leakPerNum : leakPerNum,
+				cate : cate
 			};  
 			res.send(arr);
 		}(); 
@@ -240,7 +246,8 @@ function get_devapps(dname) {
 
 app.get("/leak", function (req, res) {
 	var LeakLists = [];
-	var aname = req.body.aname;
+	var aname = req.query.aname;
+	console.log(aname);
 	LeakLists = Arms.methods.app2leaks(aname).call({ from: defaultAddr });
 	LeakLists.then(function (_leaklist) {
 		console.log("_leaklist length " + _leaklist.length);
