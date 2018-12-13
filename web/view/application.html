@@ -53,12 +53,12 @@
                 <thead>
                     <tr>
                         <th scope="col">Application Name</th>
-                        <th scope="col">The numbe of Leak</th>
+                        <th scope="col">The number of Leak</th>
                         <th scope="col">Developer</th>
                         <th scope="col">Category</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id = "application_table_body">
                     <tr>
                     </tr>
                 </tbody>
@@ -97,7 +97,7 @@
                 var length = data.appName.length;
                 var i;
                 for (i = 0; i < length; i++) {
-                        add_row(i, data);
+                        add_row2(i, data);
                 }
         }
 
@@ -114,6 +114,33 @@
              // cell[2].innerHTML = data.dev[i];
              // cell[3].innerHTML = num2cate(data.cate[i]);
         }
+		function add_row2(i, data) {
+			var table_body = document.getElementById('application_table_body');
+			var new_div = document.createElement('tr');
+			var cell0 = document.createElement('td');
+			var cell1 = document.createElement('td');
+			var cell2 = document.createElement('td');
+			var cell3 = document.createElement('td');
+			cell0.innerHTML = data.appName[i];
+			cell1.innerHTML = data.numLeak[i];
+			cell2.innerHTML = data.dev[i];
+			cell3.innerHTML = num2cate(data.cate[i]);
+			cell0.setAttribute('scope', "col");
+			cell1.setAttribute('scope', "col");
+			cell2.setAttribute('scope', "col");
+			cell3.setAttribute('scope', "col");
+			var locstr = "location.href = '/Application/"+data.appName[i] + "'";
+			cell0.setAttribute('onclick', locstr);
+			cell1.setAttribute('onclick', locstr);
+			cell2.setAttribute('onclick', locstr);
+			cell3.setAttribute('onclick', locstr);
+			console.log(locstr);
+			new_div.appendChild(cell0);
+			new_div.appendChild(cell1);
+			new_div.appendChild(cell2);
+			new_div.appendChild(cell3);
+			table_body.appendChild(new_div);
+		}
 		function num2cate(num){
 			//0: game, 1: productivity, 2: social, 3: wallpaper, 4:weather
 			var cate;

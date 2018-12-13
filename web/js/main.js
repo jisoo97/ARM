@@ -251,7 +251,6 @@ app.get("/leak", function (req, res) {
 				source[j] = await _leaklist[j][0];
 				sink[j] = await _leaklist[j][1];
 			}
-		}
 		console.log(source);
 		console.log(sink);
 		var arr = {
