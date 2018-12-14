@@ -52,7 +52,7 @@ app.listen(3000, function () {
 var ArmsOutput = ArmOutput.ArmsOutput;
 var ArmsContractAbi = ArmsOutput.contracts['Arms.sol:Arms'].abi;
 //var contractAddr = "0xAc00Ce20F25d84Ced289a187Bb89224b3c553dF5";
-var contractAddr = "0x010F7e9BdaB71752FEeCb6BABF0432A2a20Bd0A3";
+var contractAddr = "0x04dA672741aEBcEC9911cdBF2f495C67Fe2f18Df";
 Arms = new web3.eth.Contract(JSON.parse(ArmsContractAbi), contractAddr);
 
 
@@ -166,18 +166,21 @@ app.get("/dr", function(req, res){
 			var devName = [];
 			var leakPerNum = [];
 			var cate = [];
+			var apps = [];
 			for (let j = 0; j < _devnamelist.length; j++) {
 				await new Promise(resolve => setTimeout(resolve, 10));
 				devName[j] = _devnamelist[j];
+				apps[j] = [];
 				var devApps = await get_devapps(devName[j]);
 				var totalNumLeak = 0;
 				var dd = await async function loop() {
 					for (let k = 0 ; k < devApps.length ; k++) {
 						await new Promise(resolve => setTimeout(resolve, 10));
-						console.log("devApps : " + devApps[k]);
-						var dname = await devApps[k][0];
+						var aname = await devApps[k][0];
+						var dname = await devApps[k][1];
 						cate[j] = await devApps[k][3];
-						var numLeak = (await get_app(dname))[0];
+						apps[j][k] = aname;
+						var numLeak = (await get_app(aname))[0];
 						totalNumLeak += await (numLeak*1);
 					}
 
@@ -189,14 +192,17 @@ app.get("/dr", function(req, res){
 			}   
 			//console.log(devName);
 			//console.log(leakPerNum);
-			bubbleSort(leakPerNum, devName);
-			//console.log(devName);
-			//console.log(leakPerNum);
+			bubbleSort(leakPerNum, devName, cate, apps);
+			console.log(devName);
+			console.log(leakPerNum);
+			console.log(cate);
+			console.log(apps);
 			console.log("cate: " + cate);
 			var arr = { 
 				dev : devName,
 				leakPerNum : leakPerNum,
-				cate : cate
+				cate : cate,
+				apps : apps
 			};  
 			res.send(arr);
 		}(); 
@@ -215,6 +221,29 @@ function bubbleSort(a, b) {
 				b[i] = b[i+1];
 				a[i+1] = tempa;
 				b[i+1] = tempb;
+				swapped = true;
+			}
+		}
+	} while (swapped);
+}
+function bubbleSort(a, b, c, d) {
+	var swapped;
+	do {
+		swapped = false;
+		for (var i=0; i < a.length-1; i++) {
+			if (a[i] > a[i+1]) {
+				var tempa = a[i];
+				var tempb = b[i];
+				var tempc = c[i];
+				var tempd = d[i];
+				a[i] = a[i+1];
+				b[i] = b[i+1];
+				c[i] = c[i+1];
+				d[i] = d[i+1];
+				a[i+1] = tempa;
+				b[i+1] = tempb;
+				c[i+1] = tempc;
+				d[i+1] = tempd;
 				swapped = true;
 			}
 		}

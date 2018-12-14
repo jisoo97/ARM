@@ -25,6 +25,7 @@ contract Arms {
 
 	struct App {
 		string aname; //key
+		string developer;
 		uint256 num_leaks;
 		uint256 category; //0: game, 1: productivity, 2: social, 3: wallpaper, 4:weather
 		bool exists;
@@ -36,6 +37,9 @@ contract Arms {
 	uint256 public num_total_apps;
 	uint256 public num_total_coms;
 	uint256 public num_total_devs;
+	string[] public company_name_arr;
+	string[] public app_name_arr;
+	string[] public developer_name_arr;
 
 	// 2) =================== Entity ==========================	
 	mapping(string => Company) companies;
@@ -55,6 +59,18 @@ contract Arms {
 		return companies[cname].num_apps;
 	}
 
+	function get_company_name_arr() public returns(string[]){
+		return company_name_arr;
+	}
+
+	function get_developer_name_arr() public returns(string[]){
+		return developer_name_arr;
+	}
+
+	function get_application_name_arr() public returns(string[]){
+		return app_name_arr;
+	}
+
 	// Function to be called when investing
 	function set(string cname, string aname, string acategory, string dname, string source, string sink) public {
 		uint256 uintcategory = cate2uint(acategory);
@@ -64,22 +80,26 @@ contract Arms {
 		if(companies[cname].exists == false) {
 			companies[cname] = Company({cname: cname, addr: msg.sender, num_apps: 0, ad_point: 0, exists: true});
 			num_total_coms++;
+			company_name_arr.push(cname);
 		}
 		new_company = companies[cname];
 
-		// ====================Construct a new company object==========================	
+		// ====================Construct a new devleoper object==========================	
 		Developer storage new_developer;
 		if(developers[dname].exists == false) {
 			developers[dname] = Developer({dname: dname, num_apps: 0, reputation: 0, exists: true});
 			num_total_devs++;
+			developer_name_arr.push(dname);
 		}
 		new_developer = developers[dname];
+
 
 		// ====================Construct a new app object==========================	
 		App storage new_app;
 		if(apps[aname].exists == false) {
-			apps[aname] = App({aname: aname, num_leaks : 0, category: uintcategory, exists: true});
+			apps[aname] = App({aname: aname, developer: dname, num_leaks : 0, category: uintcategory, exists: true});
 			num_total_apps++;
+			app_name_arr.push(aname);
 		}
 		new_app = apps[aname];
 
@@ -123,11 +143,11 @@ contract Arms {
 		return false;
 	}
 
-	function get_app(string aname) public view returns(uint256, uint256) {
+	function get_app(string aname) public view returns(uint256,string, uint256) {
 		if(apps[aname].exists)
-			return (apps[aname].num_leaks, apps[aname].category);
+			return (apps[aname].num_leaks, apps[aname].developer, apps[aname].category);
 		else
-			return (999, 999);
+			return (999, "no", 999);
 	}
 
 	function get_com(string cname) public view returns(address, uint256, uint256) {
