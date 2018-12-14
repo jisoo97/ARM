@@ -1,0 +1,866 @@
+miner.start()
+debug.verbosity(3)
+miner.stop()
+debug.verbosity(0)
+miner.setEtherbase(personal.listAccounts[1])
+miner.start()
+miner.stop()
+miner.setEtherbase(personal.listAccounts[2])
+miner.start()
+miner.stop()
+miner.setEtherbase(personal.listAccounts[0])
+miner.start()
+miner.stop()
+miner.setEtherbase(personal.listAccounts[3])
+miner.start()
+personal.listAccounts
+eth.getBalance("0xa92fa8c0462e228904772d9abe4b3169d7acdbc0")
+eth.getBalance(personal.listAccounts[0])
+eth.getBalance(personal.listAccounts[1])
+eth.getBalance(personal.listAccounts[2])
+eth.getBalance(personal.listAccounts[3])
+eth.getBalance(personal.listAccounts[2])
+miner.setEtherbase(personal.listAccounts[0])
+miner.start()
+miner.stop()
+miner.setEtherbase(personal.listAccounts[1])
+miner.start()
+miner.stop()
+miner.setEtherbase(personal.listAccounts[2])
+miner.start()
+miner.stop()
+miner.setEtherbase(personal.listAccounts[3])
+miner.start()
+miner.stop()
+miner.start()
+miner.stop()
+miner.start()
+personal.listAccounts[1]
+eth.getBalance(personal.listAccounts[0])
+eth.getBalance(personal.listAccounts[1])
+eth.getBalance(personal.listAccounts[2])
+eth.getBalance(personal.listAccounts[3])
+eth.coinbase
+personal.listAccounts
+miner.setEtherbase(personal.listAccountsp[3])
+miner.setEtherbase(personal.listAccounts[3])
+miner.setEtherbase(personal.listAccounts[2])
+miner.setEtherbase(personal.listAccounts[3])
+miner.start()
+miner.stop()
+miner.setEtherbase(personal.listAccounts[3])
+miner.start()
+personal.listAccounts
+eth.coinbase
+personal.listAccounts
+miner.start()
+eth.pending
+eth.pendingTransactions
+personal.listAccounts
+eth.getBalance("0x43befd80ed9e2fe57feab87b655074358476c876")
+eth.coinbase
+miner.setEtherbase("0x43befd80ed9e2fe57feab87b655074358476c876")
+miner.start()
+eth.getBalance(personal.listAccounts[2])
+eth.fromWei
+eth.utils
+fromWei
+personal.listAccounts
+eth.pendingTransactions
+eth.coinbase
+eth.getBalance("0x9ed85ac06ee0f132842bbb0216f960bed6a84ec9")
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+miner.setEtherbase(0x9ed85ac06ee0f132842bbb0216f960bed6a84ec9)
+miner.setEtherbase("0x9ed85ac06ee0f132842bbb0216f960bed6a84ec9")
+miner.start()
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.pendingTransactions
+eth.getBalance("0x5fe4EcDD697FA042428fB5635fcB76251c38357F")
+eth.getBalance("0xd1CCB76f5770a4d27949edf4F2aB77b84A90bf8A")
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.getBalance("0x31A31032782eD20E289D44dcedDE9A05e1BB0802")
+eth.getBalance("0xb63ab1EE0680D0657952e5DF52f8CfCdDaB52452")
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.getBalance("0x4822375D92847AF6e72a3182Fc822fe8C6Ff3406")'
+eth.getBalance("0x4822375D92847AF6e72a3182Fc822fe8C6Ff3406")
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.getBalance("0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4")
+eth.getBalance("0xC19Fe0D8892b3c3CD0DFfcd21aAF956DfdF6fEbC")
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction({from: personal.listAccounts[3], to: "0x4822375D92847AF6e72a3182Fc822fe8C6Ff3406", value: '10000000000000000000'})
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.getBalance("0x4822375D92847AF6e72a3182Fc822fe8C6Ff3406")
+eth.sendTransaction({from: personal.listAccounts[3], to: "0xC19Fe0D8892b3c3CD0DFfcd21aAF956DfdF6fEbC", value: '10000000000000000000'})
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.getBalance("0xC19Fe0D8892b3c3CD0DFfcd21aAF956DfdF6fEbC")
+eth.getTransaction("0xedaab4e319e9ecd03269370a0438ef9e0e0e550a52d4a59abe0d6bb81b88baec")
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction({from: personal.listAccounts[3], to: "0xC19Fe0D8892b3c3CD0DFfcd21aAF956DfdF6fEbC", value: web3.toWei(3, "ether"), gas: 90000000})
+ec7t8b5z8*
+eth.sendTransaction({from: personal.listAccounts[3], to: "0xC19Fe0D8892b3c3CD0DFfcd21aAF956DfdF6fEbC", value: web3.toWei(3, "ether"), gas: 90000000})
+eth.sendTransaction({from: personal.listAccounts[3], to: "0xC19Fe0D8892b3c3CD0DFfcd21aAF956DfdF6fEbC", value: web3.toWei(3, "ether"), gas: 9000000})
+eth.sendTransaction({from: personal.listAccounts[3], to: "0xC19Fe0D8892b3c3CD0DFfcd21aAF956DfdF6fEbC", value: web3.toWei(3, "ether"), gas: 900000})
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.pendingTransactions
+eth.getBalance("0xC19Fe0D8892b3c3CD0DFfcd21aAF956DfdF6fEbC")
+eth.getTransaction("0x643fe4d5acd849649e88bb2933e6d1e9b92b902e604592f388dc0f9f56705227")
+eth.getBalance("0xc19fe0d8892b3c3cd0dffcd21aaf956dfdf6febc")
+eth.getPendingTransactions("0xc19fe0d8892b3c3cd0dffcd21aaf956dfdf6febc")
+eth.getTransactionReceipt"0x643fe4d5acd849649e88bb2933e6d1e9b92b902e604592f388dc0f9f56705227")
+eth.getTransactionReceipt("0x643fe4d5acd849649e88bb2933e6d1e9b92b902e604592f388dc0f9f56705227")
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction({from: 0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4, to: 0xa92fa8c0462e228904772d9abe4b3169d7acdbc0, value: web3.toWei(500, "ether")})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xa92fa8c0462e228904772d9abe4b3169d7acdbc0", value: web3.toWei(500, "ether")})
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xC19Fe0D8892b3c3CD0DFfcd21aAF956DfdF6fEbC", value: web3.toWei(500, "ether")})
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.pendingTransactions
+eth.getBalance("0xc19fe0d8892b3c3cd0dffcd21aaf956dfdf6febc")
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x36Bf6601523f34122ee852425C6a49876D8458ff", value: web3.toWei(500, "ether")})
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.getTransaction("0xa34406f90a43c810837e5d043c1356d23b7f32f134b8f368a6693acdc524404b")
+eth.getBalance("0x36bf6601523f34122ee852425c6a49876d8458ff")
+eth.getTransactionReceipt("0xa34406f90a43c810837e5d043c1356d23b7f32f134b8f368a6693acdc524404b")
+eth.getTransactionReceipt("0x3835a6d4be29d66146afdd0b86ed794edaa513485bf96646332d95253669d766")
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x7d6b1714e9803e7c08f3db65eddd8291da7742eb", value: web3.toWei(500, "ether")})
+eth.getBalance("0x7d6b1714e9803e7c08f3db65eddd8291da7742eb")
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.getTransaction("0x913f9c5a248365801990b4a6fe9ae7aa6e4555ff134311d2df90d071c2fe5375")
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.getBalance("0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4")
+eth.getBalance("0x7d6B1714E9803e7C08F3Db65eDdd8291da7742Eb")
+eth.getTransactionReceipt("0x5991dc59bb0bf66b293ed69aa9e4cda0fbfaa133f9f9c920468ab1c8dd360f3")
+eth.getTransactionReceipt("0x5991dc59bb0bf66b293ed69aa9e4cda0fbfaa133f9f9c920468ab1c8dd360f33")
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x2a5b5be272cf919d73528508485c8c335d39f040", value: web3.toWei(500, "ether")})
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.getBalance("0x2a5b5be272cf919d73528508485c8c335d39f040")
+eth.getBalance("0x2A5B5bE272cf919d73528508485c8C335D39F040")
+debug.traceTransaction("0x6377e92cc18a919380e56538319ed7b70b34ed43f284015c570c1a5593e6164b")
+debug.verbosity(3)
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x2a5b5be272cf919d73528508485c8c335d39f040", value: web3.toWei(500, "ether")})
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+debug.verbosity(0)
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction("0x2A5B5bE272cf919d73528508485c8C335D39F040", web3.toWei(5000, "ether"), {from: eth.accounts[3]})
+eth.sendTransaction("0x2A5B5bE272cf919d73528508485c8C335D39F040", web3.toWei(5000, "ether"), {from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4"})
+eth.sendTransaction("0x2a5b5be272cf919d73528508485c8c335d39f040", web3.toWei(500, "ether"), {from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4"})
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction(0x3ACb05E30f0e1dbA5Ca212Ca34Ad19E107824d20, web3.toWei(500, "ether"), {from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4"})
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction("0x3ACb05E30f0e1dbA5Ca212Ca34Ad19E107824d20", web3.toWei(500, "ether"), {from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4"})
+eth.getTransactionReceipt("0x524916d3b0c69510b5a0525578ea32bfad4d1b64a555ca32a3d363602ae671fa")
+eth.sendTransaction("0x3acb05e30f0e1dba5ca212ca34ad19e107824d20", web3.toWei(500, "ether"), {from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4"})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x3acb05e30f0e1dba5ca212ca34ad19e107824d20", web3.toWei(500, "ether")})
+eth.sendTransaction
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x3acb05e30f0e1dba5ca212ca34ad19e107824d20", value: web3.toWei(500, "ether")})
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.getTransaction("0x6ceb8aad1dc62101661666eefe772703da8152ad284118aa0d6412cf391df937")
+eth.getBalance("0x3acb05e30f0e1dba5ca212ca34ad19e107824d20")
+var amount = web3.toWei(5, "ether")
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xaE824D73A6db41edcF26dE0EC95a598b3bDB6E0c",  value: amount, gas: 1000000})
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.getBalance("0x2AC0720Ba047a0C929991Bb9B256D40Fc8F0D467")
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xE9a758d66544C349FD0Ec2E6d91e582451Fb3748",  value: amount, gas: 2300})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xE9a758d66544C349FD0Ec2E6d91e582451Fb3748",  value: amount, gas: 2700})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xE9a758d66544C349FD0Ec2E6d91e582451Fb3748",  value: amount, gas: 10000})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xE9a758d66544C349FD0Ec2E6d91e582451Fb3748",  value: amount, gas: 100000})
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xE9a758d66544C349FD0Ec2E6d91e582451Fb3748",  value: amount, gas: 10000})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xE9a758d66544C349FD0Ec2E6d91e582451Fb3748",  value: amount, gas: 50000})
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.getBalance("0xE9a758d66544C349FD0Ec2E6d91e582451Fb3748")
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xE9a758d66544C349FD0Ec2E6d91e582451Fb3748",  value: amount, gas: 21000})
+eth.pendingTransactions
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+debug.verbosity(9)
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xE9a758d66544C349FD0Ec2E6d91e582451Fb3748",  value: amount, gas: 21000})debug.verbosity(9)
+debug.verbosity(0)
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xE9a758d66544C349FD0Ec2E6d91e582451Fb3748",  value: amount, gas: 21000})debug.verbosity(9)
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xD4205bb19146c11f1eD0FF8abD8AA8075b53dD2B",  value: amount, gas: 21000})
+debug.verbosity(9)
+debug.verbosity(0)
+function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether"); i++; })}; checkAllBalances();
+eth.pendingTransactions
+var contract =0xD4205bb19146c11f1eD0FF8abD8AA8075b53dD2B
+contract
+var contract = "0xD4205bb19146c11f1eD0FF8abD8AA8075b53dD2B"
+contract
+deploy
+personal.listAccounts
+loadScript('script/assn10_1.js')
+loadScript('script/assn10_2.js')
+CustomToken
+CostumToken.address
+CustomToken.address
+CrowdFunding.address
+CrowdFunding.methods
+CrowdFunding.tokenReward
+CrowdFunding.tokenReward()
+CrowdFunding.tokenReward(CustomToken.address)
+CustomToken.address
+CrowdFunding.tokenReward("0xf3d4d9b627c74932ae529e9a6b7c0315ab72508d")
+CustomToken.token
+token
+CrowdFunding.ended
+CrowdFunding.ended()
+CrowdFunding.token()
+CrowdFunding.token
+loadScript('script/assn10_1.js')
+loadScript('script/assn10_2.js')
+eth.pendingTransactions
+miner.start()
+eth.pendingTransactions
+loadScript('script/assn10_2.js')
+loadScript('script/assn10_1.js')
+tokenInstance = tokenContract.new(deployTransationObject2)
+tokenContract
+tokenContract.address
+loadScript('script/assn10_2.js')
+CustomToken.address
+tokenContract.at
+var re = tokenContract.at(CustomToken.address)
+re
+re.transfer
+personal.listAccounts
+CrowdFunding.address
+function checkAllBalances() {
+    var totalBal = 0;
+    for (var acctNum in eth.accounts) {
+        var acct = eth.accounts[acctNum];
+        var acctBal = web3.fromWei(eth.getBalance(acct), "ether");
+        totalBal += parseFloat(acctBal);
+        console.log("  eth.accounts[" + acctNum + "]: \t" + acct + " \tbalance: " + acctBal + " ether");
+    }
+    console.log("  Total balance: " + totalBal + " ether");
+};
+checkAllBalances()
+CrowdFunding.ended
+CrowdFunding.ended()
+CrowdFunding.tokenReward()
+CrowdFunding.tokenReward() = "0x56d1d61c906640835ab2e283e324809c6e3a5455"
+token.at
+re.at
+re
+CrowdFunding.address
+CustomToken.address
+re.transfer("0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", 500)
+checkAllBalances
+checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x9E0b9bc31A4594F4a02B41B948212ef3f3f72346",  value: amount, gas: 21000})
+amout
+amount
+var amount = web3.toWei(5, "ether")
+amount
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x9E0b9bc31A4594F4a02B41B948212ef3f3f72346",  value: amount, gas: 21000})
+checkAllBalances();
+eth.pendingTransactions
+checkAllBalances();
+totalAmount
+CustomToke
+CustomToken
+CrowdFunding
+checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xc0eb177A65b4f24754B1257A23A6Be2D1F0C40D9",  value: amount, gas: 21000})
+eth.pendingTransactions
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xEc7ca4C592Cc88DC51be09DB7C419CAC4438834d",  value: amount, gas: 21000})
+eth.pendingTransactions
+checkAllBalances();
+miner.start(1)
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xEc7ca4C592Cc88DC51be09DB7C419CAC4438834d",  value: amount, gas: 21000})
+eth.pendingTransactions
+miner.start()
+eth.pendingTransactions
+checkAllBalances();
+miner.setEtherbase(eth.accounts[2])
+miner.start()
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x35561858A590872A60E646a499bCE15805347d9C",  value: amount, gas: 21000})
+eth.pendingTransactions
+checkAllBalances();
+amuont
+amount
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x35561858A590872A60E646a499bCE15805347d9C",  value: amount, gas: 100000})
+checkAllBalances();
+eth.pendingTransactions
+checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xfBDcE4Fec3D0e0c1B460F3ae6734307E17De4028",  value: amount, gas: 100000})
+eth.pendingTransactions
+miner.start()
+eth.pendingTransactions
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x11F20B77be104433A35415Ff882aa349f37fb822",  value: amount, gas: 100000})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x0DD9776551F06951136649B7617F405443D117Af",  value: amount, gas: 100000})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xeb5fef4f577A680437192D95d3AC72CBA2fFA8f9",  value: amount, gas: 100000})
+eth.pendingTransactions
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x9d814655751Bca999fC6ca82E5D28817DA2E705F",  value: amount, gas: 100000})
+eth.pendingTransactions
+var amount = toWei(12, "ether")
+amount
+var amount = web3.toWei(12, "ether")
+amount
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xE6F4876D4Dd717f41E7506125E362088Fb554919",  value: amount, gas: 100000})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x831ae866ED1E372C1d5fe0e6Bd4132Aa01cEecDD",  value: amount, gas: 100000})
+eth.pendingTransactions
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x32710DB53F80d90c7b946a93c10389A475fD548a",  value: amount, gas: 100000})
+eth.pendingTransactions
+CrowdFunding.events
+CrowdFunding
+CrowdFunding.events
+CrowdFunding.methods
+CrowdFunding.FundTransfer
+CrowdFunding.FundTransfer*\()
+CrowdFunding.FundTransfer()
+loadScript('script/assn10_1.js')
+loadScript('script/assn10_2.js')
+CrowdFunding.FundTransfer
+CrowdFunding.FundTransfer()
+CrowdFunding.FundTransfer().returnValues
+CrowdFunding.FundTransfer({}, '', function(error, result){
+  if (!error)
+    if (result.args.isContribution) {
+        console.log("\n New backer! Received " + web3.fromWei(result.args.amount, "ether") + " ether from " + result.args.backer  )
+        console.log( "\n The current funding at " +( 100 *  crowdsale.amountRaised.call() / crowdsale.fundingGoal.call()) + "% of its goals. Funders have contributed a total of " + web3.fromWei(crowdsale.amountRaised.call(), "ether") + " ether.");
+        var timeleft = Math.floor(Date.now() / 1000)-crowdsale.deadline();
+        if (timeleft>3600) {  console.log("Deadline has passed, " + Math.floor(timeleft/3600) + " hours ago")
+        } else if (timeleft>0) {  console.log("Deadline has passed, " + Math.floor(timeleft/60) + " minutes ago")
+        } else if (timeleft>-3600) {  console.log(Math.floor(-1*timeleft/60) + " minutes until deadline")
+        } else {  console.log(Math.floor(-1*timeleft/3600) + " hours until deadline")
+        }
+    } else {
+        console.log("Funds transferred from crowdsale account: " + web3.fromWei(result.args.amount, "ether") + " ether to " + result.args.backer  )
+    }
+});
+var event = CrowdFunding.FundTransfer({}, '', function(error, result){
+  if (!error)
+    if (result.args.isContribution) {
+        console.log("\n New backer! Received " + web3.fromWei(result.args.amount, "ether") + " ether from " + result.args.backer  )
+        console.log( "\n The current funding at " +( 100 *  crowdsale.amountRaised.call() / crowdsale.fundingGoal.call()) + "% of its goals. Funders have contributed a total of " + web3.fromWei(crowdsale.amountRaised.call(), "ether") + " ether.");
+        var timeleft = Math.floor(Date.now() / 1000)-crowdsale.deadline();
+        if (timeleft>3600) {  console.log("Deadline has passed, " + Math.floor(timeleft/3600) + " hours ago")
+        } else if (timeleft>0) {  console.log("Deadline has passed, " + Math.floor(timeleft/60) + " minutes ago")
+        } else if (timeleft>-3600) {  console.log(Math.floor(-1*timeleft/60) + " minutes until deadline")
+        } else {  console.log(Math.floor(-1*timeleft/3600) + " hours until deadline")
+        }
+    } else {
+        console.log("Funds transferred from crowdsale account: " + web3.fromWei(result.args.amount, "ether") + " ether to " + result.args.backer  )
+    }
+});
+event
+event.callbaks
+event.callbacks
+event.callbacks[0]
+event.callbacks[0]()
+CrowdFunding.address
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: ""0x0e7e087037b3caae16fe704dfeb19502d27d4e67"",  value: amount, gas: 100000})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x0e7e087037b3caae16fe704dfeb19502d27d4e67",  value: amount, gas: 100000})
+checkAllBalances
+checkAllBalances();
+eth.pendingTransactions
+checkAllBalances();
+eth.pendingTransactions
+checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x0e7e087037b3caae16fe704dfeb19502d27d4e67",  value: amount, gas: 27000})
+eth.pendingTransactions
+checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: ""0x0e7e087037b3caae16fe704dfeb19502d27d4e67"",  value: amount, gas: 150000})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x0e7e087037b3caae16fe704dfeb19502d27d4e67",  value: amount, gas: 155000})
+checkAllBalances();
+eth.pendingTransactions
+checkAllBalances();
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x32710DB53F80d90c7b946a93c10389A475fD548a",  value: amount, gas: 155000})
+eth.pendingTransactions
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xF6815041Ec38625895fc1aF776De7a73B63eEaaB",  value: amount, gas: 155000})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0xB68d6227C6d0AF965b784461e65E8E8dDA048F2B",  value: amount, gas: 155000})
+eth.sendTransaction({from: "0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4", to: "0x553775eB32482998B0B225fAC2dcaF58eBd77c20",  value: amount, gas: 155000})
+eth.pendingTransactions
+checkAllBalances();
+eth.getBalance("0x6bE464b18e1CC49fDCC294Bcfd42915F07Dc8337")
+eth.pendingTransactions
+checkAllBalances();
+CustomToken.methos
+CustomToken.methods
+eth.pendingTransactions
+CustomToken.transfer
+CustomToken.transfer.estimateGas
+CustomToken.transfer.estimateGas()
+CustomToken.address
+CustomToken.transfer.estimateGas({from: CustomToken.address})
+CustomToken.transfer.estimateGas({from: CustomToken.address}, function(error, estimatedGas) {})
+CustomToken.transfer.estimateGas({from: CustomToken.address, gasPrice: 15000}, function(error, estimatedGas) {})
+eth.estimateGas
+eth.estimateGas()
+eth.estimateGas({from: CustomToken.address})
+CustomToken.transfer.estimateGas({from: CustomToken.address})
+getBalance("0x19E910616c048f2c5944EbD7B59A9818b968A27c")
+eth.getBalance("0x19E910616c048f2c5944EbD7B59A9818b968A27c")
+checkAllBalances
+checkAllBalances();
+eth.sendTransaction({from: "0xa92fa8c0462e228904772d9abe4b3169d7acdbc0", to: "0x19E910616c048f2c5944EbD7B59A9818b968A27c", value: web3.toWei(10, "ether")})
+eth.pendingTransactions
+checkAllBalances();
+eth.getBalance("0x19e910616c048f2c5944ebd7b59a9818b968a27c")
+eth.sendTransaction({from: "0xa92fa8c0462e228904772d9abe4b3169d7acdbc0", to: "0x19E910616c048f2c5944EbD7B59A9818b968A27c", value: web3.toWei(10, "ether"), gas: 155000})
+eth.pendingTransactions
+checkAllBalances();
+eth.estimateGas("0x19E910616c048f2c5944EbD7B59A9818b968A27c")
+eth.estimateGas(CustomToken)
+eth.estimateGas(CrowdFunding)
+eth.sendTransaction({from: "0xa92fa8c0462e228904772d9abe4b3169d7acdbc0", to: "0x19E910616c048f2c5944EbD7B59A9818b968A27c", value: web3.toWei(10, "ether"), gas: 53000})
+eth.pendingTransactions
+checkAllBalances();
+eth.sendTransaction({from: "0xa92fa8c0462e228904772d9abe4b3169d7acdbc0", to: "0x19E910616c048f2c5944EbD7B59A9818b968A27c", value: web3.toWei(10, "ether"), gas: 53000})
+eth.pendingTransactions
+checkAllBalances();
+eth.sendTransaction({from: "0xa92fa8c0462e228904772d9abe4b3169d7acdbc0", to: "0x19E910616c048f2c5944EbD7B59A9818b968A27c", value: web3.toWei(10, "ether"), gas: 53000}, function(err, data) { if(err) console.log(err); console.log(data);})
+eth.pendingTransactions
+checkAllBalances();
+eth.sendTransaction({from: "0xa92fa8c0462e228904772d9abe4b3169d7acdbc0", to: "0x19E910616c048f2c5944EbD7B59A9818b968A27c", value: web3.toWei(10, "ether"), gas: 153000}, function(err, data) { if(err) console.log(err); console.log(data);})
+checkAllBalances();
+eth.pendingTransactions
+eth.getBalance("0x19E910616c048f2c5944EbD7B59A9818b968A27c")
+eth.pendingTransactions
+checkAllBalances();
+eth.sendTransaction({from: "0xa92fa8c0462e228904772d9abe4b3169d7acdbc0", to: "0x3b6ff6C83C90FFf13C03ED73918914350390447D", value: web3.toWei(10, "ether"), gas: 153000}, function(err, data) { if(err) console.log(err); console.log(data);})
+checkAllBalances();
+eth.getBalance("0x3b6ff6C83C90FFf13C03ED73918914350390447D")
+eth.toWei(1, "ether")
+web3.toWei(1, "ether")
+checkAllBalances();
+eth.getBalance("0xb8dd0e8Da1796dBaE7101600Fc134c67587fd1A9")
+eth.pendingTransactions
+eth.getBalance("0xb8dd0e8Da1796dBaE7101600Fc134c67587fd1A9")
+eth.getBalance("0x4ca29E8efadBb0d884071F9b75b9779678134507")
+eth.getBalance("0xFE277971558f2F8792656ed2705501284E5f3B5A
+")
+eth.getBalance("0xFE277971558f2F8792656ed2705501284E5f3B5A")
+eth.getBalance("0x6eEd093cC2f213cb4B38453bB34E6D787c684794")
+checkAllBalances();
+miner.setEtherbase("0x9ed85ac06ee0f132842bbb0216f960bed6a84ec9")
+miner.setEtherbase("0xf0678b3e4ef2f1b970b19e2bb2ee65efe0bedca4")
+miner.start()
+eth.pendingTransactions
+eth.sendTransaction({from: "0x4521c5D8ADfbBcB869Fe3cbCDd362f10421D2dBC", to: "0xa92fa8c0462e228904772d9abe4b3169d7acdbc0", value: web3.toWei(1200, "ether")})
+CrowdFunding
+CrowdFunding.from
+eth.pendingTransactions
+miner.stop()
+eth.pendingTransactions
+checkAllBalances
+checkAllBalances();
+miner.start()
+checkAllBalances();
+eth.pendingTransactions
+eth.getTransactionReceipt("0x1bf3aa20e58a75bd97717a8f478a5507e8760d9bfc6bd23e936f0cf29fa7bb32")
+checkAllBalances();
+eth.pendingTransactions
+function checkAllBalances() {
+    var totalBal = 0;
+    for (var acctNum in eth.accounts) {
+        var acct = eth.accounts[acctNum];
+        var acctBal = web3.fromWei(eth.getBalance(acct), "ether");
+        totalBal += parseFloat(acctBal);
+        console.log("  eth.accounts[" + acctNum + "]: \t" + acct + " \tbalance: " + acctBal + " ether");
+    }
+    console.log("  Total balance: " + totalBal + " ether");
+}; checkAllBalances()
+miner.setEtherbase("0x56d1d61c906640835ab2e283e324809c6e3a5455")
+miner.start()
+function checkAllBalances() {
+    var totalBal = 0;
+    for (var acctNum in eth.accounts) {
+        var acct = eth.accounts[acctNum];
+        var acctBal = web3.fromWei(eth.getBalance(acct), "ether");
+        totalBal += parseFloat(acctBal);
+        console.log("  eth.accounts[" + acctNum + "]: \t" + acct + " \tbalance: " + acctBal + " ether");
+    }
+    console.log("  Total balance: " + totalBal + " ether");
+}; checkAllBalances()
+eth.getBalance(0x8F5B38F9550D6A7D4159a15480E4e751659b7699)
+eth.getBalance("0x8F5B38F9550D6A7D4159a15480E4e751659b7699")
+eth.getBalance("0x77083766bC3275fB934Aee083596eBC340B6a189
+")
+eth.getBalance("0x77083766bC3275fB934Aee083596eBC340B6a189")
+eth.pendingTransactions
+eth.getBalance("0x47292d1E29fC13F822E6dc0B5521d49278e7012b")
+eth.pendingTransactions
+function checkAllBalances() {
+    var totalBal = 0;
+    for (var acctNum in eth.accounts) {
+        var acct = eth.accounts[acctNum];
+        var acctBal = web3.fromWei(eth.getBalance(acct), "ether");
+        totalBal += parseFloat(acctBal);
+        console.log("  eth.accounts[" + acctNum + "]: \t" + acct + " \tbalance: " + acctBal + " ether");
+    }
+    console.log("  Total balance: " + totalBal + " ether");
+}; checkAllBalances()
+eth.pendingTransactions
+eth.getBalance("0xa844d1868bC7fC6DBbdC9c723e6C5800081DE250")
+eth.pendingTransactions
+function checkAllBalances() {
+    var totalBal = 0;
+    for (var acctNum in eth.accounts) {
+        var acct = eth.accounts[acctNum];
+        var acctBal = web3.fromWei(eth.getBalance(acct), "ether");
+        totalBal += parseFloat(acctBal);
+        console.log("  eth.accounts[" + acctNum + "]: \t" + acct + " \tbalance: " + acctBal + " ether");
+    }
+    console.log("  Total balance: " + totalBal + " ether");
+}; checkAllBalances()
+eth.pendingTransactions
+function checkAllBalances() {
+    var totalBal = 0;
+    for (var acctNum in eth.accounts) {
+        var acct = eth.accounts[acctNum];
+        var acctBal = web3.fromWei(eth.getBalance(acct), "ether");
+        totalBal += parseFloat(acctBal);
+        console.log("  eth.accounts[" + acctNum + "]: \t" + acct + " \tbalance: " + acctBal + " ether");
+    }
+    console.log("  Total balance: " + totalBal + " ether");
+}; checkAllBalances()
+eth.pendingTransactions
+function checkAllBalances() {
+    var totalBal = 0;
+    for (var acctNum in eth.accounts) {
+        var acct = eth.accounts[acctNum];
+        var acctBal = web3.fromWei(eth.getBalance(acct), "ether");
+        totalBal += parseFloat(acctBal);
+        console.log("  eth.accounts[" + acctNum + "]: \t" + acct + " \tbalance: " + acctBal + " ether");
+    }
+    console.log("  Total balance: " + totalBal + " ether");
+}; checkAllBalances()
+eth.pendingTransactions
+personal.listAccounts("
+0xF0678b3e4ef2f1b970b19e2bb2EE65efe0bEdcA4", "ec7t8b5z8*", 7200)
+personal.listAccounts("0xF0678b3e4ef2f1b970b19e2bb2EE65efe0bEdcA4", "ec7t8b5z8*", 7200)
+eth.pendingTransactions
+function checkAllBalances() {
+    var totalBal = 0;
+    for (var acctNum in eth.accounts) {
+        var acct = eth.accounts[acctNum];
+        var acctBal = web3.fromWei(eth.getBalance(acct), "ether");
+        totalBal += parseFloat(acctBal);
+        console.log("  eth.accounts[" + acctNum + "]: \t" + acct + " \tbalance: " + acctBal + " ether");
+    }
+    console.log("  Total balance: " + totalBal + " ether");
+}; checkAllBalances()
+eth.pendingTransactions
+exit()
+personal.listAccounts
+eth.getBalance("0x9ed85ac06ee0f132842bbb0216f960bed6a84ec9")
+eth.pendingTransactions
+miner.start()
+eth.pendingTransactions
+miner.start()
+personal.listAccounts
+miner.start()
+loadScript('script/assn10/assn10_1.js')
+loadScript('script/proj/assn10_1.js')
+CustomTokenInstance
+loadScript('script/proj/assn10_1.js')
+loadScript('script/proj/deploy.js')
+web3
+web3.version
+loadScript('script/proj/deploy.js')
+Web3
+Web3.modules
+Web3()
+Web3
+loadScript('script/proj/deploy.js')
+sleep
+loadScript('script/proj/deploy.js')
+var defaultAddr = personal.listAccounts[0];
+personal.listAccounts[0]
+loadScript('script/proj/deploy.js')
+ArmsInstance
+loadScript('script/proj/deploy.js')
+ArmsContract
+ArmsContract.address
+miner.start
+miner.start(
+)
+ArmsContract.address
+eth.pendingTransactions
+ArmsContract.address
+ArmsInstance
+ArmsInstance.address
+loadScript('script/proj/deploy2.js')
+require
+fs
+var fs = require("fs");
+npm install
+exti
+var fs = require("fs");
+var solc = require('solc')
+loadScript('script/proj/deploy2.js')
+defaultAddr
+loadScript('script/proj/deploy2.js')
+defaultAddr
+personal
+personal.listAccounts
+personal.listAccounts[0]
+loadScript('script/proj/deploy2.js')
+defaultAddr
+loadScript('script/proj/deploy2.js')
+myContractReturned.
+myContractReturned
+eth.pendingTransactions
+myContractReturned
+myContractReturned.address
+gasEstimate
+myContractReturned.address
+miner.start()
+eth.pendingTransactions
+miner.start()
+myContractReturned.address
+loadScript('script/proj/deploy2.js')
+eth.pendingTransactions
+loadScript('script/proj/deploy2.js')
+eth.pendingTransactions
+MyContract
+MyContract.address
+MyContract.at
+MyContract.at(personal.listAccounts[0])
+eth.pendingTransactions
+myContractReturned
+loadScript('script/proj/deploy2.js')
+eth.pendingTransactions
+loadScript('script/proj/deploy2.js')
+eth.pendingTransactions
+loadScript('script/proj/deploy2.js')
+myContractReturned
+loadScript('script/proj/deploy2.js')
+Arms
+Arms.num_aps
+Arms.num_apps
+Arms.num_apps()
+Arms.set
+Arms.set("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection;.getInputStream:()Ljava/io/InputStream;", "Landroid/content/SharedPreferences$Editor?;.putString:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+")
+Arms.set("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection", "Landroid/content/SharedPreferences")
+Arms.set("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection", "Landroid/content/SharedPreferences", {from: defaultAddr})
+Arms
+Arms.num_apps
+Arms.num_apps()
+eth.pendingTransactions
+Arms.num_apps()
+Arms
+Arms.num_coms()
+Arms.num_dev()
+Arms.num_devs()
+Arms.num_devs
+Arms.getData
+Arms.num_devs.getData
+Arms.num_devs.getData()
+Arms.set.getData()
+Arms.set.getData("", "", "", "", "")
+var trash = Arms.set.getData("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection", "Landroid/content/SharedPreferences")
+trash
+Arms.address
+eth.sendTransaction({from: defaultAddr, to: Arms.address, data:trash})
+eth.pendingTransactions
+Arms.num_apps()
+Arms.num_dev()
+Arms.num_devs()
+Arms.num_coms()
+Arms.get_companies
+Arms.get_companie
+Arms.get_companies
+Arms.get_companies("com1")
+Arms.get_companies("com1", {from: defaultAddr}))
+Arms.get_companies("com1", {from: defaultAddr})
+eth.p
+eth.pendingTransactions
+var sibal =  Arms.get_companies("com1", {from: defaultAddr})
+sibal
+defaultAddr
+eth.getTransaction(sibal)
+loadScript('sciprt/proj/deploy.js')
+loadScript('script/proj/deploy.js')
+data
+var data = Arms.set.getData("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection", "Landroid/content/SharedPreferences")
+data
+defaultAddr
+Arms.addr
+Arms.address
+var res = sendTransaction({from: defaultAddr, to: Arms.address, data: data})
+var res = eth.sendTransaction({from: defaultAddr, to: Arms.address, data: data})
+res
+eth.pendingTransactions
+Arms.num_apps;
+Arms.num_apps()
+Arms.get_num_apps
+Arms.get_num_apps()
+Arms.get_num_apps("siba")
+Arms.get_num_apps
+Arms
+loadScript('script/proj/deploy.js')
+Arms
+Arms.get_num_apps
+loadScript('script/proj/deploy.js')
+Arms
+Arms.get_num_apps
+loadScript('script/proj/deploy.js')
+Arms
+eth.pendingTransactions
+Arms
+contractInstance
+eth.pendingTransactions
+Arms
+var data = contractInstance.set.getData("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection", "Landroid/content/SharedPreferences")
+data
+var res = eth.sendTransaction({from: defaultAddr, to: Arms.address, data: data})
+eth.pendingTransactions
+eth.pn
+eth.pendingTransactions
+miner.start()
+eth.pendingTransactions
+Arms
+contractInstance
+contractInstance.num_apps()
+contractInstance.num_coms()
+contractInstance.num_devs()
+contractInstance.get_num_apps()
+contractInstance.get_num_apps("com1")
+contractInstance.get_num_apps("com1", {from: defaultAddr})
+contractInstance.num_app
+contractInstance.num_apps
+contractInstance.num_apps()
+contractInstance.num_apps({from: defaultAddr})
+contractInstance.num_devs({from: defaultAddr})
+loadScript('script/proj/deploy.js')
+Arms
+var data = contractInstance.set.getData("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection", "Landroid/content/SharedPreferences")
+var res = eth.sendTransaction({from: defaultAddr, to: Arms.address, data: data})
+eth.pendingTransactions
+var data = Arms.set.getData("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection", "Landroid/content/SharedPreferences")
+var res = eth.sendTransaction({from: defaultAddr, to: Arms.address, data: data})
+eth.pendingTransactions
+var data = contractInstance.set.getData("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection", "Landroid/content/SharedPreferences")
+var res = eth.sendTransaction({from: defaultAddr, to: contractInstance, data: data})
+data
+var res = eth.sendTransaction({from: defaultAddr, to: contractInstance.address, data: data})
+eth.pendingTransactions
+contractInstance.allEvents
+contractInstance.allEvents()
+contractInstance
+contractInstance.printf
+contractInstance.printf("sibal", "sibal")
+contractInstance.printf("sibal", "sibal").sibal
+contractInstance.printf
+contractInstance.printf()
+contractInstance.printf().watch
+contractInstance.printf().watch(function(err, result) {console.log(result)});
+var data = contractInstance.set.getData("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection", "Landroid/content/SharedPreferences")
+var res = eth.sendTransaction({from: defaultAddr, to: contractInstance.address, data: data})
+contractInstance.printf()
+contractInstance.printf().watch
+contractInstance.printf().watch()
+contractInstance.printf().watch(function(err, result) {console.log(result)});
+contractInstance.printf()
+contractInstance.printf().get
+contractInstance.printf().get(function (err, result) {console.log(result)});
+var data = contractInstance.set.getData("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection", "Landroid/content/SharedPreferences")
+var res = eth.sendTransaction({from: defaultAddr, to: contractInstance.address, data: data})
+eth.pendingTransactions
+contractInstance.set("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection", "Landroid/content/SharedPreferences")
+contractInstance
+contractInstance.set("com1", "ah.creativecodeapps.tiempo-12", "Developer16", "Ljava/net/URLConnection", "Landroid/content/SharedPreferences", {from: defaultAddr})
+eth.pendingTransactions
+contractInstance.num_apps()
+contractInstance.num_coms()
+exit()
+miner.start()
+loadScript('contract_script.js')
+personal.listAccounts
+loadScript('contract_script.js')
+eth.pendingTransactions
+miner.start()
+eth.pendingTransactions
+eth.getTransactionReceipt("0x04b176229ffa4d10c2c7c570d960191c85316dc24ab70b3a1fd4df283fe9ce3d")
+eth.getBalance(eth.accounts[0])
+miner.start()
+loadScript('contract_script.js')
+eth.pendingTrasactions
+eth.getpendingTrasactions
+eth.pendingTransactions
+loadScript('contract_script_new.js')
+eth.pendingTransactions
+loadScript('contract_script_new.js')
+eth.pendingTransactions
+eth.getBalance(eth.accounts[0])
+miner.start()
+loadScript('contract_script_new.js')
+loadScript('contract_script_final.js')
+eth.pendingTransactions
+loadScript('/home/bc/project_dh/gethscript/set_productivity.js');
+loadScript('/home/bc/project_dh/gethscript/set_social.js');
+loadScript('/home/bc/project_dh/gethscript/set_game.js');
+loadScript('/home/bc/project_dh/gethscript/set_weather.js');
+loadScript('/home/bc/project_dh/gethscript/set_wallpaper.js');
+miner.start()
+loadScript('/home/bc/project_dh/gethscript/set_demo_com_weather.csv')
+loadScript('/home/bc/project_dh/gethscript/set_demo_com_weather.js')
+loadScript('contract_script_final.js')
+miner.start()
+eth.
+eth.pendingTransactions
+contract
+miner.start()
+contract
+miner.start(
+)
+eth.pendingTransactions
+loadScript('/home/bc/project_dh/gethscript/set_demo_company_game.js')
+eth.estimateGas
+eth.pendingTransactions
+net
+eth
+admin.nodeInfo.enode
+admin.peers
+admin.nodeInfo.enode
+eth.accounts
+loadScript('/home/bc/project_dh/gethscript/set_social.js')
+loadScript('/home/bc/project_dh/gethscript/set_postech_social.js')
+eth.pendingTransactions
+miner.start()
+eth.pendingTransactions
+contract
+function checkAllBalances() {
+    var totalBal = 0;
+    for (var acctNum in eth.accounts) {
+        var acct = eth.accounts[acctNum];
+        var acctBal = web3.fromWei(eth.getBalance(acct), "ether");
+        totalBal += parseFloat(acctBal);
+        console.log("  eth.accounts[" + acctNum + "]: \t" + acct + " \tbalance: " + acctBal + " ether");
+    }
+    console.log("  Total balance: " + totalBal + " ether");
+};
+checkAllBalances()
