@@ -12,15 +12,9 @@ ARM stores static analysis results of all apps, which are released to the offici
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
 ```
 Git clone https://github.com/jisoo97/ARM.git
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the program
 
