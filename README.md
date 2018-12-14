@@ -29,6 +29,10 @@ In another shell,
 cd js
 node main.js
 ```
+And then, go to :
+```
+http://localhost:3000/SecurityCompany
+```
 
 ### Client (Each node i.e. security company)
 
