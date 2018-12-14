@@ -22,12 +22,9 @@ Git clone https://github.com/jisoo97/ARM.git
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
+## Running the program
 
 ### Server
-We assumes that you are the first time using geth.
 ```
 cd geth
 mkdir data
@@ -85,4 +82,3 @@ http:Server_IP/3000/Home.html
 * **Dahyun Kang**
 * **Jisoo Kim**
 * **Beumjin Cho**
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
