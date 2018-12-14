@@ -45,7 +45,7 @@ geth --datadir data init genesis.json // Init only the first time you run the se
 geth --datadir data --verbosity 0 console
 geth console> personal.newAccount()
 ```
-You will get a hexadecimal address. It will be ```$defaultAddr```
+You will get a hexadecimal address. It will be ```$defaultAddr``` \
 Change ```line3: var contractAddr = 0x________________``` in ```geth/contract_script_final.js``` into your ```$Server's_contractAddr``` \
 Change ```line4: var defaultAddr = 0x________________``` in ```geth/contract_script_final.js``` into your ```$defaultAddr```
 
