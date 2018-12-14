@@ -26,20 +26,53 @@ End with an example of getting some data out of the system or using it for a lit
 
 Explain how to run the automated tests for this system
 
-### Server ()
+### Server
+We assumes that you are the first time using geth.
+```
+cd geth
+mkdir data
+geth --datadir data init genesis.json // Init only the first time you run the server
+geth --datadir data --rpc --rpcapi 'web3, net, personal, admin, eth' --rpcaddr "localhost" --rpcport "8545" --rpccorsdomain "*" --verbosity 0 console
+geth console> personal.newAccount()
+```
+You will get a hexadecimal address. It will be ```$defaultAddr```
+```
+geth console> miner.start()
+```
+```
+cd js
+```
+Change ```line14: var defaultAddr = 0x________________``` in ```js/deploy.js``` into your ```$defaultAddr``` \
 
 ```
-Give an example
+node deploy.js
+```
+Then, you will get ```Arms CA: $contractAddr```, copy ```$contractAddr``` to a notepad. \
+Change ```line58: var contractAddr = 0x________________``` in ```js/main.js``` into your ```$contractAddr``` \
+
+```
+node main.js
 ```
 
 ### Client (Each node i.e. security company)
 
-Explain what these tests test and why
 ```
+cd geth
 mkdir data
-geth --datadir data init genesis.json
+geth --datadir data init genesis.json // Init only the first time you run the server
 geth --datadir data --verbosity 0 console
-geth console> admin.addPeer("enode://55c5bed57081d14f07181caf682f355a6ca5ec373e789a410f34b1cd8935f5ed56513b863852a12246754f04f7ba1f324e3a79841221254723b1e0c7f882ba85@[$Server_IP]:30303")
+geth console> personal.newAccount()
+```
+You will get a hexadecimal address. It will be ```$defaultAddr```
+Change ```line3: var contractAddr = 0x________________``` in ```geth/contract_script_final.js``` into your ```$Server's_contractAddr``` \
+Change ```line4: var defaultAddr = 0x________________``` in ```geth/contract_script_final.js``` into your ```$defaultAddr```
+
+```
+geth console> miner.start()
+```
+
+```
+geth console> admin.addPeer($Server_enode")
 geth console> loadScript('contract_script_final.js')  // specify the contract
 geth console> loadScript($set_leak_js) // push the leak you have founded
 ```
