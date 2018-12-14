@@ -27,27 +27,12 @@ End with an example of getting some data out of the system or using it for a lit
 ### Server
 ```
 cd geth
-mkdir data
-geth --datadir data init genesis.json // Init only the first time you run the server
-geth --datadir data --rpc --rpcapi 'web3, net, personal, admin, eth' --rpcaddr "localhost" --rpcport "8545" --rpccorsdomain "*" --verbosity 0 console
-geth console> personal.newAccount()
-```
-You will get a hexadecimal address. It will be ```$defaultAddr```
-```
+geth --datadir fastdata --rpc --rpcapi 'web3, net, personal, admin, eth' --rpcaddr "localhost" --rpcport "8545" --rpccorsdomain "*" --verbosity 0 console
 geth console> miner.start()
 ```
+In another shell,
 ```
 cd js
-```
-Change ```line14: var defaultAddr = 0x________________``` in ```js/deploy.js``` into your ```$defaultAddr``` \
-
-```
-node deploy.js
-```
-Then, you will get ```Arms CA: $contractAddr```, copy ```$contractAddr``` to a notepad. \
-Change ```line58: var contractAddr = 0x________________``` in ```js/main.js``` into your ```$contractAddr``` \
-
-```
 node main.js
 ```
 
