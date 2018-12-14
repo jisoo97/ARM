@@ -21,17 +21,17 @@ Git clone https://github.com/jisoo97/ARM.git
 ### Server
 ```
 cd geth
-geth --datadir fastdata --rpc --rpcapi 'web3, net, personal, admin, eth' --rpcaddr "localhost" --rpcport "8545" --rpccorsdomain "*" --verbosity 0 console
+geth --datadir fastdata --preload contract_script_server.js --rpc --rpcapi 'web3, net, personal, admin, eth' --rpcaddr "localhost" --rpcport "8545" --rpccorsdomain "*" --verbosity 0 console
 geth console> miner.start()
 ```
 In another shell,
 ```
-cd js
+cd web/js
 node main.js
 ```
 And then, go to :
 ```
-http://localhost:3000/SecurityCompany
+http://Server_IP:3000/home
 ```
 
 ### Client (Each node i.e. security company)
@@ -39,22 +39,21 @@ http://localhost:3000/SecurityCompany
 ```
 cd geth
 mkdir data
-geth --datadir data init genesis.json // Init only the first time you run the server
+geth --datadir data init genesis.json // Initailize only once you first generate the data folder!
 geth --datadir data --verbosity 0 console
-geth console> personal.newAccount()
+geth console> personal.newAccount() // And setup your passphrase
+geth console> exit
 ```
-You will get a hexadecimal address. It will be ```$defaultAddr``` \
-Change ```line3: var contractAddr = 0x________________``` in ```geth/contract_script_final.js``` into your ```$Server's_contractAddr``` \
-Change ```line4: var defaultAddr = 0x________________``` in ```geth/contract_script_final.js``` into your ```$defaultAddr```
-
 ```
+geth --datadir data --preload contract_script_cli.js --verbosity 0 console
+geth console> personal.unlockAccount(personal.listAccounts[0], "PASSPHRASE_YOU_JUST_SET_UP", 7200)
 geth console> miner.start()
 ```
 
 ```
-geth console> admin.addPeer($Server_enode")
-geth console> loadScript('contract_script_final.js')  // specify the contract
-geth console> loadScript($set_leak_js) // push the leak you have founded
+geth console> admin.addPeer(SERVER'S_ENODE)
+geth console> var getdata = contract.set.getData("COMPANYNAME", "APPNAME", "CATEGORY", "DEVELOPER", "SOURCE", "SINK"); // CATEGORY should be only one in social, wallpaper, weather, productivity, game
+geth console> web3.eth.sendTransaction({ from: defaultAddr, to: contractAddr, data: getdata, gas: 7000000 });
 ```
 And then, go to :
 ```
